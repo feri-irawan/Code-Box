@@ -1,1 +1,78 @@
 
+  * {
+    outline: none;
+  }
+  .box {
+    border: 2px solid #333333;
+    border-radius: 5px;
+  }
+  .box-header {
+    background: #333333;
+    padding: 10px;
+  }
+  .box-header span {
+    border-radius: 20px;
+  }
+  .box-header span {
+    content: "";
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    margin: 0 2px;
+  }
+  .box-header span:nth-child(1) {
+    background: #ff0078;
+  }
+  .box-header span:nth-child(2) {
+    background: #ffbd15;
+  }
+  .box-header span:nth-child(3) {
+    background: #00ff59;
+  }
+  .box-content pre {
+    margin: 0;
+    border-radius: 0;
+    padding: 10px;
+    /* background: red; */
+  }
+  
+pre[class*="language-"].line-numbers {
+	position: relative;
+	padding-left: 3em;
+	counter-reset: linenumber;
+}
+
+pre[class*="language-"].line-numbers > code {
+	position: relative;
+	white-space: pre-line;
+}
+
+.line-numbers .line-numbers-rows {
+	position: absolute;
+	pointer-events: none;
+	top: 0;
+	font-size: 100%;
+	left: -3.8em;
+	width: 2em; /* works for line-numbers below 1000 lines */
+	letter-spacing: -1px;
+	border-right: 1px solid #999;
+
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+
+}
+
+.line-numbers-rows > span {
+	display: block;
+	counter-increment: linenumber;
+}
+
+.line-numbers-rows > span:before {
+	content: counter(linenumber);
+	color: #999;
+	display: block;
+	padding-right: 0.8em;
+	text-align: right;
+}
